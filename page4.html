@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 5 - Позиционирование в CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fb;
+            font-size: 100%;
+            line-height: 1.4;
+        }
+
+      
+        .fixed-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e2a3a;
+            padding: 0.8rem 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .fixed-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            display: inline-block;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .fixed-menu a:hover {
+            background-color: #ff8c42;
+            color: #000;
+            font-size: 1.3rem;
+            z-index: 1100;
+            border-radius: 8px;
+            transform: scale(1.02);
+        }
+
+        .content {
+            margin-top: 5rem;
+            padding: 1.5rem;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       
+        .ad-block {
+            position: relative;
+            background: linear-gradient(135deg, #fff5e6, #ffe0b5);
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+      
+        .ad-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background-color: #d32f2f;
+            color: white;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .ad-block h3 {
+            color: #c13b00;
+            margin-bottom: 0.3rem;
+        }
+
+        .ad-block p {
+            font-size: 0.9rem;
+            margin: 0.2rem 0;
+        }
+
+       
+        .two-columns {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-width: 250px;
+        }
+
+      
+        .float-left-img {
+            float: left;
+            margin: 0 1.2rem 0.8rem 0;
+            width: 160px;
+            border-radius: 12px;
+            background: #e2e8f0;
+            padding: 0.3rem;
+        }
+
+        .float-left-img img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .caption {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 0.3rem;
+        }
+
+      
+        .relative-box {
+            position: relative;
+            left: 1rem;
+            background: #eef2fa;
+            padding: 0.6rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+            border-left: 4px solid #ff8c42;
+            font-style: italic;
+        }
+
+       
+        .props-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        .props-table th, .props-table td {
+            border: 1px solid #ccc;
+            padding: 0.6rem;
+            vertical-align: top;
+        }
+
+        .props-table th {
+            background-color: #1e2a3a;
+            color: white;
+            text-align: center;
+        }
+
+        .props-table td:first-child {
+            font-weight: bold;
+            background-color: #f9f2e0;
+        }
+
+        h1 {
+            color: #1e4668;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 1rem 0 0.6rem;
+            color: #2c5282;
+        }
+
+        hr {
+            margin: 1rem 0;
+        }
+
+      
+    </style>
+</head>
+<body>
+
+<div class="fixed-menu">
+    <a href="page2.html">📘 Страница 1 (CSS)</a>
+    <a href="page4.html">📊 Страница 3 (Таблицы)</a>
+</div>
+
+<div class="content">
+    <!-- Рекламный блок (с absolute-бейджем внутри) -->
+    <div class="ad-block">
+        <div class="ad-badge">🔥 absolute</div>
+        <h3>🔥 Мега-курс по CSS positioning!</h3>
+        <p>Научись управлять любым элементом на странице</p>
+        <p><strong>Скидка 40%</strong> до конца недели</p>
+        <p>⭐ Старт сразу ⭐</p>
+    </div>
+
+   
+    <div class="two-columns">
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <div class="column">
+            <h1>Позиционирование в CSS</h1>
+            <div class="float-left-img">
+                <img src="2.png" alt="CSS position" onerror="this.src='https://picsum.photos/id/0/160/120'">
+                <div class="caption">Рис. Свойство position</div>
+            </div>
+            <p>Безусловно, позиционирование с использованием таблиц стилей – тема достаточно сложная, богатая многими нюансами и различными «подводными камнями» в части толкования правил CSS разработчиками разных программ просмотра. Но, с другой стороны, игра стоит свеч, поскольку отказ от верстки документов с использованием обычных таблиц и прочих «хитростей» вроде невидимых изображений, позволяет добиться гибкости в оформлении. А при умелом использовании возможностей CSS можно получать достаточно сложные эффекты, зачастую даже нереализуемые средствами XHTML, и все это – без нагромождений лишнего кода.</p>
+            <div class="relative-box">
+                📍 <strong>Относительное позиционирование:</strong> этот блок смещён вправо на <code>left: 1rem</code>.
+            </div>
+            <p>За назначение элементу той или иной схемы позиционирования в CSS 2 отвечают свойства <strong>position</strong> и <strong>float</strong>, причем первое служит для позиционирования в нормальном потоке, относительного и абсолютного, а второе – только для создания перемещаемых (плавающих) элементов.</p>
+        </div>
+
+       
+        <div class="column">
+            <h2>Свойство position</h2>
+            <p>Оно может принимать одно из значений, приведенных в таблице:</p>
+            <table class="props-table">
+                <thead>
+                    <tr><th>Значение</th><th>Задаваемый вид позиционирования</th><th>Описание</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>static</td><td>Нормальный поток (по умолчанию)</td><td>Обычный блок, позиционируемый в контексте общего потока. Позиционирование с помощью CSS left/top невозможно.</td></tr>
+                    <tr><td>relative</td><td>Перемещаемый объект</td><td>Сначала позиционируется как обычный блок, затем смещается (left, top) относительно этого положения. Следующий блок располагается так, будто этот не сдвигался.</td></tr>
+                    <tr><td>absolute</td><td>Абсолютное позиционирование</td><td>Положение и размер задаются left, top, right, bottom относительно содержащего контейнера (ближайшего позиционированного предка).</td></tr>
+                    <tr><td>fixed</td><td>Абсолютное позиционирование (относительно окна)</td><td>Аналогично absolute, но блок фиксируется относительно окна браузера и не перемещается при прокрутке.</td></tr>
+                </tbody>
+            </table>
+            <p>Таким образом, используя комбинацию <strong>position</strong> и <strong>float</strong>, можно реализовать любую схему раскладки – от классической многослойной до «плавающих» элементов.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
